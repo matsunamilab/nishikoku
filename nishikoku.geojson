@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "_color": "#ff0000",
+        "_opacity": 0.77,
+        "_weight": 25
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            139.466116,
+            35.699206
+          ],
+          [
+            139.466685,
+            35.699137
+          ],
+          [
+            139.466814,
+            35.698453
+          ],
+          [
+            139.466899,
+            35.698021
+          ],
+          [
+            139.467876,
+            35.698135
+          ],
+          [
+            139.468616,
+            35.697625
+          ],
+          [
+            139.469233,
+            35.697398
+          ],
+          [
+            139.46913,
+            35.696084
+          ],
+          [
+            139.468631,
+            35.69588
+          ],
+          [
+            139.468631,
+            35.695836
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_markerType": "DivIcon",
+        "_html": "<div style=\"font-size:24pt;font-weight:bold;color:#ff0000;\">熊祥(くまよし)</div>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.468356,
+          35.695702
+        ]
+      }
+    }
+  ]
+}

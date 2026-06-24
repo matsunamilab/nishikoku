@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="shortcut icon" href="https://cyberjapandata.gsi.go.jp/favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title></title>
+
+    <script type="text/javascript">
+        var vURL      = "https://maps.gsi.go.jp";
+        var vURL_Site = "/index_pm.html?postmessage=1#17/35.697704/139.468228/&base=pale&ls=pale&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1";
+        var oMap      = null;        
+        function Init(){
+            oMap = document.createElement("iframe");
+            oMap.style.display = "none";
+  
+            EvtResize();
+            oMap.src = vURL + vURL_Site;
+            oMap.onload = function(){
+                var oContent   = oMap.contentWindow;
+                var ClientMode = {
+                  baseUrl     : null
+                , location    : null
+                , LayerJS     : null
+                , sakuzuList  : null
+                , queryString : null
+                };
+
+                ClientMode.sakuzuList = [{"fileName":"","visible":true,"features":[{"type":"Feature","properties":{"_color":"#ff0000","_opacity":0.77,"_weight":25},"geometry":{"type":"LineString","coordinates":[[139.466116,35.699206],[139.466685,35.699137],[139.466814,35.698453],[139.466899,35.698021],[139.467876,35.698135],[139.468616,35.697625],[139.469233,35.697398],[139.46913,35.696084],[139.468631,35.69588],[139.468631,35.695836]]}},{"type":"Feature","properties":{"_markerType":"DivIcon","_html":"<div style=\"font-size:24pt;font-weight:bold;color:#ff0000;\">熊祥(くまよし)</div>"},"geometry":{"type":"Point","coordinates":[139.468356,35.695702]}}]}];
+
+
+                oContent.postMessage(ClientMode, vURL);
+            };
+
+            document.body.appendChild(oMap);
+        };
+
+        function EvtResize(){
+	        var w = window.innerWidth;
+	        var h = window.innerHeight;
+            if(oMap != null){
+                oMap.style.width   = w + "px";
+                oMap.style.height  = h + "px";
+                if(oMap.style.display == "none"){
+                    oMap.style.display = "block";
+                }
+            }
+        };
+
+        window.onload   = function(){
+            document.body.style.margin   = "0px";
+            document.body.style.padding  = "0px";
+            document.body.style.overflow = "hidden";
+
+            Init();
+        }
+        window.onresize = EvtResize;
+    </script>
+</head>
+<body></body>
+</html>
